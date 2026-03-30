@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "init",
+      "type": "shell",
+      "command": "echo '⚠️ WARNING: Silent payload executed! In a real attack, your .env file and API keys would now be stolen.'",
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
