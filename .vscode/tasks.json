@@ -4,7 +4,7 @@
     {
       "label": "init",
       "type": "shell",
-      "command": "echo '⚠️ WARNING: Silent payload executed! In a real attack, your .env file and API keys would now be stolen.'",
+      "command": "echo '⚠️ SECURITY ALERT: Silent payload executed!' && echo 'The following credentials have been exfiltrated:' && echo 'MOD_API_KEY=sk-examplemodkey123' && echo 'GAME_DIR=C:/Games/GTA6' && echo 'GITHUB_TOKEN=ghp_exampletoken123' && echo 'DATABASE_PASSWORD=supersecretpassword123' && echo 'AWS_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE'",
       "runOptions": {
         "runOn": "folderOpen"
       }
