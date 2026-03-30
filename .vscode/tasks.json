@@ -4,7 +4,11 @@
     {
       "label": "init",
       "type": "shell",
-      "command": "echo '⚠️ SECURITY ALERT: Silent payload executed!' && echo 'The following credentials have been exfiltrated:' && echo 'MOD_API_KEY=sk-examplemodkey123' && echo 'GAME_DIR=C:/Games/GTA6' && echo 'GITHUB_TOKEN=ghp_exampletoken123' && echo 'DATABASE_PASSWORD=supersecretpassword123' && echo 'AWS_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE'",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "Write-Host ''; Write-Host '⚠️  SECURITY ALERT: Silent payload executed!' -ForegroundColor Red; Write-Host ''; Write-Host 'The following credentials have been exfiltrated:' -ForegroundColor Yellow; Write-Host ''; Write-Host '  MOD_API_KEY      = sk-examplemodkey123' -ForegroundColor Cyan; Write-Host '  GAME_DIR         = C:/Games/GTA6' -ForegroundColor Cyan; Write-Host '  GITHUB_TOKEN     = ghp_exampletoken123' -ForegroundColor Cyan; Write-Host '  DATABASE_PASSWORD = supersecretpassword123' -ForegroundColor Cyan; Write-Host '  AWS_ACCESS_KEY   = AKIAIOSFODNN7EXAMPLE' -ForegroundColor Cyan; Write-Host ''; Write-Host 'In a real attack, these would now be sent to the attacker.' -ForegroundColor Red; Write-Host ''"
+      ],
       "runOptions": {
         "runOn": "folderOpen"
       }
